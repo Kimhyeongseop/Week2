@@ -1,0 +1,64 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.senthil.kotlin_tablayout"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:5:5-80
+11-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:5:22-77
+12    <uses-permission android:name="android.permission.READ_CONTACTS" />
+12-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:6:5-72
+12-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:6:22-69
+13
+14    <application
+14-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:8:5-27:19
+15        android:allowBackup="true"
+15-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:9:9-35
+16        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+16-->[com.android.support:support-compat:28.0.0-rc02] C:\Users\q\.gradle\caches\transforms-2\files-2.1\4256c3c86e36515b29efe9e844f6d119\support-compat-28.0.0-rc02\AndroidManifest.xml:22:18-91
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:10:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:11:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:12:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:13:9-35
+21        android:theme="@style/AppTheme" >
+21-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:14:9-40
+22        <activity android:name="com.example.senthil.kotlin_tablayout.TabLayoutActivity" >
+22-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:15:9-21:20
+22-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:15:19-52
+23            <intent-filter>
+23-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:16:13-20:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:17:17-69
+24-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:17:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:19:17-77
+26-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:19:27-74
+27            </intent-filter>
+28        </activity>
+29        <activity android:name="com.example.senthil.kotlin_tablayout.GalleryFullImage" />
+29-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:23:9-55
+29-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:23:19-53
+30        <activity android:name="com.example.senthil.kotlin_tablayout.Dialog" />
+30-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:24:9-43
+30-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:24:19-41
+31        <activity android:name="com.example.senthil.kotlin_tablayout.ModifyActivity" />
+31-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:25:9-51
+31-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:25:19-49
+32        <activity android:name="com.example.senthil.kotlin_tablayout.AccountAdder" />
+32-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:26:9-49
+32-->C:\Users\q\Desktop\tmp\final\MadCamp_Project1-master\app\src\main\AndroidManifest.xml:26:19-47
+33    </application>
+34
+35</manifest>
