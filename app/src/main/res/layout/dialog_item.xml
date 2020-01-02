@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/item_border">
+
+    <TextView
+        android:id="@+id/plus_or_minus"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize = "16dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft = "16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/item_dialog_money"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/plus_or_minus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Value" />
+
+    <TextView
+        android:id="@+id/item_dialog_usage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@+id/item_dialog_money"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Info" />
+
+</android.support.constraint.ConstraintLayout>
