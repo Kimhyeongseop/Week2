@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kotlin-TabLayout</string>
+
+    <string name="title_home">Phone</string>
+    <string name="title_aboutUs">Gallery</string>
+    <string name="title_contactUs">(Tab3)</string>
+
+</resources>
