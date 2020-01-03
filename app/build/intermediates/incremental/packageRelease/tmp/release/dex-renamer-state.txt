@@ -1,4 +1,0 @@
-#Wed Jan 01 23:33:13 KST 2020
-base.0=C\:\\Users\\q\\Desktop\\tmp\\final\\MadCamp_Project1-master\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

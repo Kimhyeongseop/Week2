@@ -1,11 +1,11 @@
 package com.example.senthil.kotlin_tablayout
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.ViewPager
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.example.senthil.kotlin_tablayout.Fragment.GalleryFragment
 import com.example.senthil.kotlin_tablayout.Fragment.Tab3Fragment
 import com.example.senthil.kotlin_tablayout.Fragment.PhoneFragment
@@ -24,9 +24,9 @@ class TabLayoutActivity : AppCompatActivity() {
 
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(PhoneFragment(),"Home")
-        adapter.addFragment(GalleryFragment(), "About Us")
-        adapter.addFragment(Tab3Fragment(), "Contact Us")
+        adapter.addFragment(PhoneFragment(),"Phone")
+        adapter.addFragment(GalleryFragment(), "Gallery")
+        adapter.addFragment(Tab3Fragment(), "(Tab3)")
         viewPager.adapter = adapter
     }
 
