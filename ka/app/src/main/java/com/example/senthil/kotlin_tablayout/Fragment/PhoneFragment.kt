@@ -7,22 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.senthil.kotlin_tablayout.CustomAdapter
+import com.example.senthil.kotlin_tablayout.*
 import com.example.senthil.kotlin_tablayout.R
-import com.example.senthil.kotlin_tablayout.User
-import com.example.senthil.kotlin_tablayout.sub
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_phone.view.*
 
 class PhoneFragment : Fragment() {
 
     private var phoneList = ArrayList<User>()
-
     private lateinit var database: DatabaseReference
-
-    var button: Button? = null
 
 
 
@@ -37,14 +34,13 @@ class PhoneFragment : Fragment() {
         val adapter = CustomAdapter(phoneList, context!!)
         val REQUEST_CODE = 3
 
-
-        button = view.findViewById<View>(R.id.btn) as Button
-        button!!.setOnClickListener(View.OnClickListener {
+        val fab: View = view.findViewById(R.id.btn)
+        fab.setOnClickListener{
+            view -> Snackbar.make(view,"plus", Snackbar.LENGTH_LONG).setAction("action", null).show()
             val intent = Intent(activity!!.applicationContext, sub::class.java)
             startActivityForResult(intent,REQUEST_CODE)
-        })
+        }
 
-        //database = FirebaseDatabase.getInstance().getReference("User")
         database = FirebaseDatabase.getInstance().getReference("User")
 
         database.addValueEventListener(object : ValueEventListener {
@@ -67,6 +63,17 @@ class PhoneFragment : Fragment() {
 
         view.mRecyclerView.adapter = adapter
 
+        adapter.itemClick= object :CustomAdapter.ItemClick{
+            override fun onClick(view: View, position:Int){
+                val intent = Intent(context, Info::class.java)
+                intent.putExtra("n", phoneList[position].name)
+                intent.putExtra("p", phoneList[position].profile)
+                intent.putExtra("w", phoneList[position].pw)
+                intent.putExtra("position",position)
+                startActivityForResult(intent,3)
+            }
+        }
+
 
         return view
     }
@@ -74,14 +81,30 @@ class PhoneFragment : Fragment() {
        super.onActivityResult(requestCode, resultCode, data)
 
         val adapter = CustomAdapter(phoneList, context!!)
-        val REQUEST_CODE = 3
 
-        if (requestCode ==REQUEST_CODE) {
+        adapter.itemClick= object :CustomAdapter.ItemClick{
+            override fun onClick(view: View, position:Int){
+                val intent = Intent(context, Info::class.java)
+                intent.putExtra("n", phoneList[position].name)
+                intent.putExtra("p", phoneList[position].profile)
+                intent.putExtra("w", phoneList[position].pw)
+                intent.putExtra("position",position)
+                startActivityForResult(intent,3)
+            }
+        }
+
+        if (requestCode ==3) {
             val str1 = data!!.getStringExtra("fn")
             val str3 = data!!.getStringExtra("pn")
+            val position= data!!.getIntExtra("position",100)
+            val newuser = User(str1, str3)
             if (str1 != null) {
-                val newuser = User(str1, str3)
-                database.child(str1).setValue(newuser)
+                if(position ==100) {
+                    database.child(str1).setValue(newuser)
+                }
+                else{
+                    database.child(phoneList[position].name!!).setValue(newuser)
+                }
                 database.addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(shot: DataSnapshot)
                     {
