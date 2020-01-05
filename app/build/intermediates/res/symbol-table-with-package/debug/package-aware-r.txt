@@ -1069,6 +1069,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add_white
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
 drawable ic_dialog_close_dark
@@ -1373,6 +1374,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id gallery_fab
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -1385,6 +1387,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView1
 id info
 id invisible
 id italic
@@ -1398,6 +1401,7 @@ id line3
 id listMode
 id list_item
 id mRecyclerView
+id mRecyclerView2
 id masked
 id media_actions
 id message
@@ -1627,9 +1631,12 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fade_in
+layout fade_out
 layout fragment_gallery
 layout fragment_phone
 layout fragment_tab3
+layout item_gallery
 layout mr_cast_dialog
 layout mr_cast_group_item
 layout mr_cast_group_volume_item
@@ -2368,3 +2375,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths

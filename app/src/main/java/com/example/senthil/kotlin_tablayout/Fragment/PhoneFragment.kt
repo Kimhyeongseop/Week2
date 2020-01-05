@@ -56,7 +56,6 @@ class PhoneFragment : Fragment() {
 
         view.mRecyclerView.adapter = adapter
 
-
         return view
     }
 }
