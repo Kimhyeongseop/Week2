@@ -1,9 +1,9 @@
 package com.bumptech.glide;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.util.Log;
-import com.example.senthil.kotlin_tablayout.Fragment.MyGlideApp;
+import androidx.annotation.NonNull;
+import com.example.senthil.kotlin_tablayout.MyGlideApp;
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.SuppressWarnings;
@@ -17,7 +17,7 @@ final class GeneratedAppGlideModuleImpl extends GeneratedAppGlideModule {
   GeneratedAppGlideModuleImpl() {
     appGlideModule = new MyGlideApp();
     if (Log.isLoggable("Glide", Log.DEBUG)) {
-      Log.d("Glide", "Discovered AppGlideModule from annotation: com.example.senthil.kotlin_tablayout.Fragment.MyGlideApp");
+      Log.d("Glide", "Discovered AppGlideModule from annotation: com.example.senthil.kotlin_tablayout.MyGlideApp");
     }
   }
 

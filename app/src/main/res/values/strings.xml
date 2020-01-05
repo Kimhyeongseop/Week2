@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Couque d\'Asse</string>
+    <string name="app_name">Kotlin-TabLayout</string>
 
-    <string name="title_address">Address</string>
-    <string name="title_gallery">Gallery</string>
-    <string name="title_account_book">Account Book</string>
+    <string name="title_home">Phone</string>
+    <string name="title_aboutUs">Gallery</string>
+    <string name="title_contactUs">(Tab3)</string>
 
 </resources>
