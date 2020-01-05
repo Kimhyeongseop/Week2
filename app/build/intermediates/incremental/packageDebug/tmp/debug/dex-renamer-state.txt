@@ -1,4 +1,7 @@
-#Fri Jan 03 20:23:08 KST 2020
-base.0=C\:\\Users\\q\\Documents\\MadCamp\\MadCamp_Project2\\NEW_Week2\\Kotlin-TabLayout-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sat Jan 04 21:56:36 KST 2020
+base.0=C\:\\Users\\q\\Documents\\MadCamp\\MadCamp_Project2\\NEW_Week2\\Kotlin-TabLayout-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=C\:\\Users\\q\\Documents\\MadCamp\\MadCamp_Project2\\NEW_Week2\\Kotlin-TabLayout-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
