@@ -1,6 +1,7 @@
 package com.example.senthil.kotlin_tablayout
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,8 @@ import android.util.Patterns
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.senthil.kotlin_tablayout.Fragment.Tab3Fragment
 import com.facebook.AccessToken
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
@@ -17,26 +20,31 @@ import com.facebook.login.LoginResult
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import java.util.regex.Pattern
 
 
 class MainActivity : Activity() {
-    override fun onPause() {
-        super.onPause()
-    }
 
+    private lateinit var database: DatabaseReference
     private lateinit var callbackManager: CallbackManager
     // 파이어베이스 인증 객체 생성
     private var firebaseAuth: FirebaseAuth? = null
     // 이메일과 비밀번호
     private var editTextEmail: EditText? = null
     private var editTextPassword: EditText? = null
+    private var editTextName: EditText? = null
+    private var name = ""
     private var email = ""
     private var password = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,25 +56,48 @@ class MainActivity : Activity() {
             facebookLogin()
         }
 
+
         // 파이어베이스 인증 객체 선언
         firebaseAuth= FirebaseAuth.getInstance()
         editTextEmail = findViewById(R.id.et_eamil)
+        editTextName = findViewById(R.id.et_name)
         editTextPassword = findViewById(R.id.et_password)
+        val sf = getSharedPreferences("sFile", Context.MODE_PRIVATE)
+        val text = sf.getString("text", "")
+        editTextEmail?.setText(text)
+
     }
 
+
+    override fun onStop() {
+        super.onStop()
+        // Activity가 종료되기 전에 저장한다.
+//SharedPreferences를 sFile이름, 기본모드로 설정
+        val sharedPreferences = getSharedPreferences("sFile", Context.MODE_PRIVATE)
+        //저장을 하기위해 editor를 이용하여 값을 저장시켜준다.
+        val editor = sharedPreferences.edit()
+        val text: String = editTextEmail?.getText().toString() // 사용자가 입력한 저장할 데이터
+        editor.putString("text", text) // key, value를 이용하여 저장하는 형태
+        //다양한 형태의 변수값을 저장할 수 있다.
+        editor.commit()
+    }
+
+//회원가입
     fun singUp(view: View?) {
+        name = editTextName!!.text.toString()
         email = editTextEmail!!.text.toString()
         password = editTextPassword!!.text.toString()
         if (isValidEmail && isValidPasswd) {
-            createUser(email, password)
+            createUser(email,name, password)
         }
     }
-
+//로그인
     fun signIn(view: View?) {
-        email = editTextEmail!!.text.toString()
+        name = editTextName!!.text.toString()
+        email=editTextEmail!!.text.toString()
         password = editTextPassword!!.text.toString()
         if (isValidEmail && isValidPasswd) {
-            loginUser(email, password)
+            loginUser(email,name, password)
         }
     }// 이메일 형식 불일치// 이메일 공백
 
@@ -93,10 +124,14 @@ class MainActivity : Activity() {
         }
 
     // 회원가입
-    private fun createUser(email: String, password: String) {
+    private fun createUser(email: String,name:String, password: String) {
+        database = FirebaseDatabase.getInstance().getReference("Auth")
         firebaseAuth!!.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this
                 ) { task ->
                     if (task.isSuccessful) { // 회원가입 성공
+
+                        val newAuth = Auth(name,email)
+                        database.child(name).setValue(newAuth)
                         Toast.makeText(this@MainActivity, R.string.success_signup, Toast.LENGTH_SHORT).show()
                     } else { // 회원가입 실패
                         Toast.makeText(this@MainActivity, R.string.failed_signup, Toast.LENGTH_SHORT).show()
@@ -105,15 +140,14 @@ class MainActivity : Activity() {
     }
 
     // 로그인
-    private fun loginUser(email: String, password: String) {
-        firebaseAuth!!.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                        this
+    private fun loginUser(email: String, name:String, password: String) {
+        firebaseAuth!!.signInWithEmailAndPassword(email, password).addOnCompleteListener(this
                 ) { task ->
                     if (task.isSuccessful) { // 로그인 성공
                         Toast.makeText(this@MainActivity, R.string.success_login, Toast.LENGTH_SHORT).show()
-
-                        startActivity(Intent(this, TabLayoutActivity::class.java))
+                        intent=Intent(this, TabLayoutActivity::class.java)
+                        intent.putExtra("email",email)
+                        startActivity(intent)
                         finish()
                     } else { // 로그인 실패
                         Toast.makeText(this@MainActivity, R.string.failed_login, Toast.LENGTH_SHORT).show()

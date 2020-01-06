@@ -23,12 +23,11 @@ class TabLayoutActivity : AppCompatActivity() {
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE
     )
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Stetho.initializeWithDefaults(this)
         var rejectedPermissionList = ArrayList<String>()
+
 
         //check !
         while (ContextCompat.checkSelfPermission(this, requiredPermssions[0]) != PackageManager.PERMISSION_GRANTED

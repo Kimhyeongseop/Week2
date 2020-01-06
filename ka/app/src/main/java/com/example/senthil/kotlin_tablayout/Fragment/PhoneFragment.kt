@@ -32,25 +32,22 @@ class PhoneFragment : Fragment() {
 
         view.mRecyclerView.layoutManager = manager
         val adapter = CustomAdapter(phoneList, context!!)
-        val REQUEST_CODE = 3
-
-        val fab: View = view.findViewById(R.id.btn)
-        fab.setOnClickListener{
-            view -> Snackbar.make(view,"plus", Snackbar.LENGTH_LONG).setAction("action", null).show()
-            val intent = Intent(activity!!.applicationContext, sub::class.java)
-            startActivityForResult(intent,REQUEST_CODE)
-        }
 
         database = FirebaseDatabase.getInstance().getReference("User")
 
+        val fab: View = view.findViewById(R.id.btn) // 추가버튼
+        fab.setOnClickListener {
+            val intent = Intent(activity!!.applicationContext, sub::class.java)
+            startActivityForResult(intent,3)
+        }
+
+//데이터 베이스에서 정보를 빼옴
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(shot: DataSnapshot)
             {
                 phoneList.clear()
                 for (snapshot in shot.getChildren()) {
-
                    var user = snapshot.getValue(User::class.java)
-
                     phoneList.add(user!!)
                 }
                 adapter.notifyDataSetChanged()
@@ -63,12 +60,12 @@ class PhoneFragment : Fragment() {
 
         view.mRecyclerView.adapter = adapter
 
-        adapter.itemClick= object :CustomAdapter.ItemClick{
+        adapter.itemClick= object :CustomAdapter.ItemClick{ // info
             override fun onClick(view: View, position:Int){
                 val intent = Intent(context, Info::class.java)
-                intent.putExtra("n", phoneList[position].name)
-                intent.putExtra("p", phoneList[position].profile)
-                intent.putExtra("w", phoneList[position].pw)
+                intent.putExtra("id", phoneList[position].name)
+                intent.putExtra("photo", phoneList[position].profile)
+                intent.putExtra("pw", phoneList[position].pw)
                 intent.putExtra("position",position)
                 startActivityForResult(intent,3)
             }
@@ -82,27 +79,27 @@ class PhoneFragment : Fragment() {
 
         val adapter = CustomAdapter(phoneList, context!!)
 
-        adapter.itemClick= object :CustomAdapter.ItemClick{
+        adapter.itemClick= object :CustomAdapter.ItemClick{ //info로 이동
             override fun onClick(view: View, position:Int){
                 val intent = Intent(context, Info::class.java)
-                intent.putExtra("n", phoneList[position].name)
-                intent.putExtra("p", phoneList[position].profile)
-                intent.putExtra("w", phoneList[position].pw)
+                intent.putExtra("id", phoneList[position].name)
+                intent.putExtra("photo", phoneList[position].profile)
+                intent.putExtra("pw", phoneList[position].pw)
                 intent.putExtra("position",position)
                 startActivityForResult(intent,3)
             }
         }
 
         if (requestCode ==3) {
-            val str1 = data!!.getStringExtra("fn")
-            val str3 = data!!.getStringExtra("pn")
+            val id = data!!.getStringExtra("id")
+            val pw = data!!.getStringExtra("pw")
             val position= data!!.getIntExtra("position",100)
-            val newuser = User(str1, str3)
-            if (str1 != null) {
-                if(position ==100) {
-                    database.child(str1).setValue(newuser)
+            val newuser = User(id, pw)
+            if (id != null) {
+                if(position ==100) { //추가
+                    database.child(id).setValue(newuser)
                 }
-                else{
+                else{ //변경
                     database.child(phoneList[position].name!!).setValue(newuser)
                 }
                 database.addValueEventListener(object : ValueEventListener {
@@ -112,7 +109,6 @@ class PhoneFragment : Fragment() {
                         for (snapshot in shot.getChildren()) {
 
                             var user = snapshot.getValue(User::class.java)
-
                             phoneList.add(user!!)
                         }
                         adapter.notifyDataSetChanged()
