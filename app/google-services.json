@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "383787389919-dfn3rkvb20st0qseussf6565sdmp2biq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.senthil.kotlin_tablayout",
+            "certificate_hash": "f3ef9f2a9aa63bcc5bc6cbcd84f3eb8a532761ec"
+          }
+        },
+        {
           "client_id": "383787389919-hv72dtfsivlkcidjt0jf6hcrca389keh.apps.googleusercontent.com",
           "client_type": 3
         }

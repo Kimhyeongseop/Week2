@@ -56,7 +56,7 @@ class GalleryFragment : Fragment() {
         } }
 
 
-       override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View?
     {
         database = FirebaseDatabase.getInstance().getReference("Gallery")
@@ -90,30 +90,30 @@ class GalleryFragment : Fragment() {
         val fab: View = view!!.findViewById(R.id.gallery_fab)
         val REQUEST_IMAGE_CAPTURE = 1
         fab.setOnClickListener{
-                Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-                    takePictureIntent.resolveActivity(activity!!.packageManager)?.also{
+            Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+                takePictureIntent.resolveActivity(activity!!.packageManager)?.also{
 
-                        /**
-                         * TRY TO STORE
-                         */
-                        // to store the image file into the EXTERNAL STORAGE
-                        val tmpFile = createImageFile()
+                    /**
+                     * TRY TO STORE
+                     */
+                    // to store the image file into the EXTERNAL STORAGE
+                    val tmpFile = createImageFile()
 
-                        if (tmpFile != null)
-                        {
-                            var photoURI = FileProvider.getUriForFile(requireContext(), "com.example.senthil.kotlin_tablayout.fileprovider", tmpFile)
-                            //var photoURI = FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID + ".fileprovider", tmpFile)
-                            //var photoURI = Uri.fromFile(tmpFile)
-                            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                        }
-
-                        /**
-                         * END!
-                         */
-
-                        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+                    if (tmpFile != null)
+                    {
+                        var photoURI = FileProvider.getUriForFile(requireContext(), "com.example.senthil.kotlin_tablayout.fileprovider", tmpFile)
+                        //var photoURI = FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID + ".fileprovider", tmpFile)
+                        //var photoURI = Uri.fromFile(tmpFile)
+                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                     }
-                } //captured new image
+
+                    /**
+                     * END!
+                     */
+
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+                }
+            } //captured new image
 
         }
         view.mRecyclerView2.adapter = adapter

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\q\\Documents\\MadCamp\\MadCamp_Project2\\NEW_Week2\\Kotlin-TabLayout-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\q\\Desktop\\20200106_1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\ffe242f8412bc997ff14a6c79f518bea\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\058626005638160da8f18c808e59834e\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\84be6fe307f69535a07af5b4b8364cd3\\appcompat-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\6e3ccc24ccf1ba885a28378212fca470\\appcompat-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

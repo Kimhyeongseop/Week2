@@ -1,8 +1,22 @@
 <resources>
     <string name="app_name">Kotlin-TabLayout</string>
+    <string name="facebook_app_id">467212154200094</string>
+    <string name="fb_login_protocol_scheme">fb467212154200094</string>
 
     <string name="title_home">Phone</string>
     <string name="title_aboutUs">Gallery</string>
     <string name="title_contactUs">(Tab3)</string>
+
+
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+
+    <string name="signin">로그인</string>
+    <string name="success_login">로그인 성공</string>
+    <string name="failed_login">로그인 실패</string>
+
+    <string name="signup">회원가입</string>
+    <string name="success_signup">회원가입 성공</string>
+    <string name="failed_signup">회원가입 실패</string>
 
 </resources>

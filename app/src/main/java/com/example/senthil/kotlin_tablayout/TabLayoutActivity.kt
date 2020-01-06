@@ -1,6 +1,5 @@
 package com.example.senthil.kotlin_tablayout
 
-import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,12 +12,10 @@ import androidx.viewpager.widget.ViewPager
 import com.example.senthil.kotlin_tablayout.Fragment.GalleryFragment
 import com.example.senthil.kotlin_tablayout.Fragment.Tab3Fragment
 import com.example.senthil.kotlin_tablayout.Fragment.PhoneFragment
-import com.facebook.stetho.Stetho
 import kotlinx.android.synthetic.main.activity_tab_layout.*
 
 class TabLayoutActivity : AppCompatActivity() {
 
-    // to get permissions
     private val multiplePermissionsCode = 100
     //List of Permissions
     private val requiredPermssions = arrayOf(
@@ -26,9 +23,11 @@ class TabLayoutActivity : AppCompatActivity() {
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE
     )
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Stetho.initializeWithDefaults(this)
+
+        //Stetho.initializeWithDefaults(this)
         var rejectedPermissionList = ArrayList<String>()
 
         //check !
@@ -49,7 +48,6 @@ class TabLayoutActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(this, rejectedPermissionList.toArray(array), multiplePermissionsCode)
             }
         }
-
         setContentView(R.layout.activity_tab_layout)
 
         setupViewPager(viewpager)
