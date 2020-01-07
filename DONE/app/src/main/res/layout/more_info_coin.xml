@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/coin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="TMP NAME!"
+        android:textSize="30dp"
+        android:gravity = "center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        />
+
+    <com.aachartmodel.aainfographics.aainfographicsLib.aachartConfiger.AAChartView
+        android:id="@+id/coin_graph"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity = "center_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/coin_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TMP PRICE!"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity = "center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coin_graph"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:id="@+id/coin_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="매수"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/coin_sell"
+        app:layout_constraintTop_toBottomOf="@id/coin_price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.01"/>
+
+    <Button
+        android:id="@+id/coin_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="매도"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@id/coin_buy"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coin_price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.01"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
