@@ -1,12 +1,17 @@
 package com.example.senthil.kotlin_tablayout.Fragment
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+=======
+import android.os.Bundle
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+<<<<<<< HEAD
 import android.widget.ListView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.senthil.kotlin_tablayout.*
@@ -69,5 +74,16 @@ class Tab3Fragment : Fragment() {
 
         // Inflate the layout for this fragment
         return view
+=======
+
+import com.example.senthil.kotlin_tablayout.R
+
+class Tab3Fragment : Fragment() {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_tab3, container, false)
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     }
 }

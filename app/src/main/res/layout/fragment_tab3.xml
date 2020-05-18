@@ -6,15 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.Tab3Fragment">
 
+<<<<<<< HEAD
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/coin_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+=======
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/title_contactUs"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FAB_go_to_my_page"
         android:layout_width="wrap_content"
@@ -30,4 +44,6 @@
         app:layout_constraintVertical_bias="0.93"
         app:layout_constraintHorizontal_bias="0.93"
         />
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 </androidx.constraintlayout.widget.ConstraintLayout>

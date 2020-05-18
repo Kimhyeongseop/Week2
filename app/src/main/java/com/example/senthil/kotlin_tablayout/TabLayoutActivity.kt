@@ -12,17 +12,28 @@ import androidx.viewpager.widget.ViewPager
 import com.example.senthil.kotlin_tablayout.Fragment.GalleryFragment
 import com.example.senthil.kotlin_tablayout.Fragment.Tab3Fragment
 import com.example.senthil.kotlin_tablayout.Fragment.PhoneFragment
+<<<<<<< HEAD
+=======
+import com.facebook.stetho.Stetho
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 import kotlinx.android.synthetic.main.activity_tab_layout.*
 
 class TabLayoutActivity : AppCompatActivity() {
 
+<<<<<<< HEAD
+=======
+    // to get permissions
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     private val multiplePermissionsCode = 100
     //List of Permissions
     private val requiredPermssions = arrayOf(
             android.Manifest.permission.READ_EXTERNAL_STORAGE,
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE
     )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

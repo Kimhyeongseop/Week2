@@ -8,13 +8,20 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.senthil.kotlin_tablayout"
+<<<<<<< HEAD
         minSdkVersion 16
+=======
+        minSdkVersion 24 /*15*/
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+<<<<<<< HEAD
 
         multiDexEnabled true
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     }
     buildTypes {
         release {
@@ -24,6 +31,10 @@ android {
     }
 }
 
+<<<<<<< HEAD
+=======
+apply plugin: 'kotlin-kapt'
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -37,6 +48,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+<<<<<<< HEAD
+=======
+    implementation 'com.google.android.material:material:1.0.0'
+
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
@@ -48,6 +64,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-auth:19.1.0'
 
+<<<<<<< HEAD
     implementation 'com.google.android.gms:play-services-auth:11.6.2'
     implementation 'com.facebook.android:facebook-login:[5,6)'
 
@@ -55,6 +72,32 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.firebaseui:firebase-ui-storage:4.3.1'
 
+=======
+    implementation  'com.facebook.stetho:stetho:1.4.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+
+    implementation 'androidx.browser:browser:1.0.0'
+
+    implementation 'androidx.mediarouter:mediarouter:1.0.0'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt "android.arch.lifecycle:compiler:1.0.0"
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //FirebaseUI
+    implementation 'com.firebaseui:firebase-ui-storage:4.3.1'
+
+    //for FAB
+    implementation 'com.android.support:design:28.0.0'
+
+
+    //for uploading image into DB
+
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+ //   implementation 'com.google.firebase:firebase-core:17.2.1'
+ //   implementation 'com.google.firebase:firebase-auth:19.1.0'
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
 }
 apply plugin: 'com.google.gms.google-services'

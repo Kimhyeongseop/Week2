@@ -56,7 +56,11 @@ class GalleryFragment : Fragment() {
         } }
 
 
+<<<<<<< HEAD
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+=======
+       override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
                               savedInstanceState: Bundle?): View?
     {
         database = FirebaseDatabase.getInstance().getReference("Gallery")
@@ -90,6 +94,7 @@ class GalleryFragment : Fragment() {
         val fab: View = view!!.findViewById(R.id.gallery_fab)
         val REQUEST_IMAGE_CAPTURE = 1
         fab.setOnClickListener{
+<<<<<<< HEAD
             Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
                 takePictureIntent.resolveActivity(activity!!.packageManager)?.also{
 
@@ -114,6 +119,32 @@ class GalleryFragment : Fragment() {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
                 }
             } //captured new image
+=======
+                Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+                    takePictureIntent.resolveActivity(activity!!.packageManager)?.also{
+
+                        /**
+                         * TRY TO STORE
+                         */
+                        // to store the image file into the EXTERNAL STORAGE
+                        val tmpFile = createImageFile()
+
+                        if (tmpFile != null)
+                        {
+                            var photoURI = FileProvider.getUriForFile(requireContext(), "com.example.senthil.kotlin_tablayout.fileprovider", tmpFile)
+                            //var photoURI = FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID + ".fileprovider", tmpFile)
+                            //var photoURI = Uri.fromFile(tmpFile)
+                            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+                        }
+
+                        /**
+                         * END!
+                         */
+
+                        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+                    }
+                } //captured new image
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
         }
         view.mRecyclerView2.adapter = adapter

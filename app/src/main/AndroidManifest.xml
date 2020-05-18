@@ -3,11 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.senthil.kotlin_tablayout">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
     <application
         tools:replace="android:appComponentFactory"
@@ -19,6 +27,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         <provider
             android:name = "androidx.core.content.FileProvider"
             android:authorities = "${applicationId}.fileprovider"
@@ -29,9 +41,13 @@
                 android:resource="@xml/file_paths"/>
         </provider>
 
+<<<<<<< HEAD
         <activity android:name=".SplashActivity"
             android:theme="@style/SplashTheme"
             android:screenOrientation="portrait">
+=======
+        <activity android:name=".TabLayoutActivity">
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

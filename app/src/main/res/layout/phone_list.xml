@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+<<<<<<< HEAD
         <ImageView
             android:id="@+id/iv_profile"
             android:layout_width="80dp"
@@ -17,6 +18,10 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
+=======
+        <LinearLayout
+            android:layout_width="match_parent"
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:orientation="vertical">
@@ -34,7 +39,15 @@
                 android:layout_height="wrap_content"
                 android:text="전화번호"
                 android:layout_margin="5dp"/>
+<<<<<<< HEAD
         </LinearLayout>
+=======
+
+
+        </LinearLayout>
+
+
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     </LinearLayout>
 
 </LinearLayout>

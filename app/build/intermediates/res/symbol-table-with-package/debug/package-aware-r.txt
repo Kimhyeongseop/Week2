@@ -644,6 +644,7 @@ color cardview_shadow_start_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+<<<<<<< HEAD
 color com_facebook_blue
 color com_facebook_button_background_color
 color com_facebook_button_background_color_disabled
@@ -657,6 +658,8 @@ color com_facebook_primary_button_disabled_text_color
 color com_facebook_primary_button_pressed_text_color
 color com_facebook_primary_button_text_color
 color com_smart_login_code
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1083,6 +1086,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+<<<<<<< HEAD
 drawable com_facebook_auth_dialog_background
 drawable com_facebook_auth_dialog_cancel_background
 drawable com_facebook_auth_dialog_header_background
@@ -1102,6 +1106,8 @@ drawable com_facebook_tooltip_blue_background
 drawable com_facebook_tooltip_blue_bottomnub
 drawable com_facebook_tooltip_blue_topnub
 drawable com_facebook_tooltip_blue_xout
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1127,10 +1133,15 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+<<<<<<< HEAD
 drawable go_to_my_page
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable i
+=======
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 drawable ic_add_white
 drawable ic_audiotrack_dark
 drawable ic_audiotrack_light
@@ -1314,8 +1325,11 @@ drawable ic_vol_type_speaker_group_light
 drawable ic_vol_type_speaker_light
 drawable ic_vol_type_tv_dark
 drawable ic_vol_type_tv_light
+<<<<<<< HEAD
 drawable icon_person
 drawable icon_phone
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 drawable mr_button_connected_dark
 drawable mr_button_connected_light
 drawable mr_button_connecting_dark
@@ -1395,18 +1409,24 @@ id barrier
 id beginning
 id blocking
 id bottom
+<<<<<<< HEAD
 id box_count
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id browser_actions_header_text
 id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+<<<<<<< HEAD
 id btn
 id btn_move
 id btn_signIn
 id btn_signUp
 id but
 id button
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id buttonPanel
 id cancel_action
 id cancel_button
@@ -1420,6 +1440,7 @@ id clip_horizontal
 id clip_vertical
 id coin_list
 id collapseActionView
+<<<<<<< HEAD
 id com_facebook_body_frame
 id com_facebook_button_xout
 id com_facebook_device_auth_instructions
@@ -1431,6 +1452,8 @@ id com_facebook_tooltip_bubble_view_bottom_pointer
 id com_facebook_tooltip_bubble_view_text_body
 id com_facebook_tooltip_bubble_view_top_pointer
 id confirmation_code
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id container
 id content
 id contentPanel
@@ -1445,12 +1468,18 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+<<<<<<< HEAD
 id detail
 id dimensions
 id direct
 id disableHome
 id display_always
 id edit
+=======
+id dimensions
+id direct
+id disableHome
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id edit_query
 id end
 id end_padder
@@ -1488,9 +1517,12 @@ id info
 id inline
 id invisible
 id italic
+<<<<<<< HEAD
 id item_coin_image
 id item_coin_name
 id item_coin_price
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id item_touch_helper_previous_elevation
 id iv_profile
 id labeled
@@ -1500,7 +1532,10 @@ id left
 id light
 id line1
 id line3
+<<<<<<< HEAD
 id linearLayout
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id listMode
 id list_item
 id mRecyclerView
@@ -1580,7 +1615,10 @@ id percent
 id phone_number
 id photo
 id pin
+<<<<<<< HEAD
 id progress_bar
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id progress_circular
 id progress_horizontal
 id radio
@@ -1663,10 +1701,15 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+<<<<<<< HEAD
 id tv_email
 id tv_name
 id tv_number
 id tv_password
+=======
+id tv_name
+id tv_number
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 id uniform
 id unknown
 id unlabeled
@@ -1734,6 +1777,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+<<<<<<< HEAD
 layout activity_main
 layout activity_sub
 layout activity_tab_layout
@@ -1744,6 +1788,11 @@ layout com_facebook_device_auth_dialog_fragment
 layout com_facebook_login_fragment
 layout com_facebook_smart_device_dialog_fragment
 layout com_facebook_tooltip_bubble
+=======
+layout activity_tab_layout
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1763,10 +1812,14 @@ layout fade_out
 layout fragment_gallery
 layout fragment_phone
 layout fragment_tab3
+<<<<<<< HEAD
 layout info
 layout item_coin
 layout item_gallery
 layout more_info_coin
+=======
+layout item_gallery
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 layout mr_cast_dialog
 layout mr_cast_group_item
 layout mr_cast_group_volume_item
@@ -1850,6 +1903,7 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
+<<<<<<< HEAD
 string com_facebook_device_auth_instructions
 string com_facebook_image_download_unknown_error
 string com_facebook_internet_permission_error_message
@@ -1873,6 +1927,8 @@ string com_facebook_smart_login_confirmation_cancel
 string com_facebook_smart_login_confirmation_continue_as
 string com_facebook_smart_login_confirmation_title
 string com_facebook_tooltip_default
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -1892,6 +1948,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+<<<<<<< HEAD
 string email
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -1899,6 +1956,10 @@ string facebook_app_id
 string failed_login
 string failed_signup
 string fb_login_protocol_scheme
+=======
+string fab_transformation_scrim_behavior
+string fab_transformation_sheet_behavior
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
@@ -1942,8 +2003,11 @@ string search_menu_title
 string signin
 string signup
 string status_bar_notification_info_overflow
+<<<<<<< HEAD
 string success_login
 string success_signup
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 string title_aboutUs
 string title_contactUs
 string title_home
@@ -2547,7 +2611,10 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+<<<<<<< HEAD
 styleable com_facebook_like_view com_facebook_auxiliary_view_position com_facebook_foreground_color com_facebook_horizontal_alignment com_facebook_object_id com_facebook_object_type com_facebook_style
 styleable com_facebook_login_view com_facebook_confirm_logout com_facebook_login_text com_facebook_logout_text com_facebook_tooltip_mode
 styleable com_facebook_profile_picture_view com_facebook_is_cropped com_facebook_preset_size
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 xml file_paths

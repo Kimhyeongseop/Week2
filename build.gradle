@@ -5,14 +5,21 @@ buildscript {
     repositories {
         google()
         jcenter()
+<<<<<<< HEAD
 
         mavenCentral()
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         maven{url "https://maven.google.com"}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+<<<<<<< HEAD
         classpath 'com.google.gms:google-services:4.3.2'
+=======
+        classpath 'com.google.gms:google-services:4.2.0'
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -20,10 +27,13 @@ buildscript {
 
 allprojects {
     repositories {
+<<<<<<< HEAD
 
         maven {
             url "https://maven.google.com"
         }
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
         google()
         jcenter()
     }

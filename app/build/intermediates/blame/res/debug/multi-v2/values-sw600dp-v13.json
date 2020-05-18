@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\q\\Desktop\\20200106_1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\08dc4bed47e10d0777206e0fd037527b\\material-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+            "outputFile": "C:\\Users\\q\\Documents\\MadCamp\\MadCamp_Project2\\NEW_Week2\\Kotlin-TabLayout-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\85bcbfa8f6a922daccfd8da8d9aa981d\\material-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +30,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\5bdfac78b0e088eb4ca447abc592bc28\\mediarouter-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\33fa912a250431e48ce589391059ddfa\\mediarouter-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -40,7 +51,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\6e3ccc24ccf1ba885a28378212fca470\\appcompat-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+                    "source": "C:\\Users\\q\\.gradle\\caches\\transforms-2\\files-2.1\\84be6fe307f69535a07af5b4b8364cd3\\appcompat-1.0.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

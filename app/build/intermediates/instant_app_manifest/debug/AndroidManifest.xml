@@ -9,7 +9,10 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="28" />
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -20,6 +23,10 @@
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
     <!-- <uses-sdk android:minSdkVersion="14"/> -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -42,16 +49,21 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+<<<<<<< HEAD
         <activity
             android:name="com.example.senthil.kotlin_tablayout.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" >
+=======
+        <activity android:name="com.example.senthil.kotlin_tablayout.TabLayoutActivity" >
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name="com.example.senthil.kotlin_tablayout.TabLayoutActivity" >
         </activity>
         <activity android:name="com.example.senthil.kotlin_tablayout.sub" />
@@ -82,6 +94,8 @@
         <activity android:name="com.example.senthil.kotlin_tablayout.Tab3CoinInfo" />
         <activity android:name="com.example.senthil.kotlin_tablayout.Tab3MyPage" />
         <activity android:name="com.facebook.CustomTabMainActivity" />
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
@@ -91,14 +105,18 @@
                 android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+<<<<<<< HEAD
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+=======
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
         <activity
+<<<<<<< HEAD
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
             android:exported="true"
@@ -118,6 +136,11 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
             android:exported="true"
             android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+=======
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
@@ -125,6 +148,7 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
             android:exported="false"
             android:initOrder="100" />
 
+<<<<<<< HEAD
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -162,6 +186,11 @@ Service handling Google Sign-In user revocation. For apps that do not integrate 
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
+=======
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+>>>>>>> 9de0792135b121a1c2c2128c1776232156b5243c
     </application>
 
 </manifest>
