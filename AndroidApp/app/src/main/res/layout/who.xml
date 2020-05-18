@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tmp_bg"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/my_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="My Page"
+        android:textColor="#bbffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="김아무개"
+        android:textColor="@color/colorPrimaryBlack"
+        android:textSize="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/email"
+        app:layout_constraintTop_toBottomOf="@id/my_page_title"
+        app:layout_constraintHorizontal_bias="0.2"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tmp@email.com"
+        android:textColor="#aaffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintRight_toRightOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintVertical_bias="0.6"/>
+
+
+    <View
+        android:id = "@+id/line"
+        android:layout_width="350dp"
+        android:layout_height="1.3dp"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/assets_text"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:text="Assets"
+        android:textColor="@color/colorPrimaryGray"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintRight_toLeftOf="@id/money"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="900000"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/assets_text"
+        app:layout_constraintLeft_toRightOf="@id/assets_text" />
+
+
+    <TextView
+        android:id="@+id/profit_text"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/money"
+        android:text="Profit"
+        android:textColor="@color/colorPrimaryGray"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintRight_toLeftOf="@id/di"
+        app:layout_constraintTop_toBottomOf="@id/assets_text" />
+
+    <TextView
+        android:id="@+id/di"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-10000"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/profit_text"
+        app:layout_constraintLeft_toLeftOf="@id/money"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lc"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/di"
+        android:background="#ffffff"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profit_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/total_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="56dp"
+        android:paddingHorizontal="5dp"
+        android:background="@color/colorYellow"
+        android:text="Total"
+        android:textColor="@color/colorPrimaryGray"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/money"
+        app:layout_constraintRight_toLeftOf="@id/total"
+        app:layout_constraintTop_toBottomOf="@id/lc"
+        />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="980000000"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/total_text"
+        app:layout_constraintLeft_toRightOf="@id/total_text"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
