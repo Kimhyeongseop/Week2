@@ -1,3 +1,3 @@
 
 # To Be B.
-### branch YoungIn
+master branch의 readme.md를 읽어주세요!
