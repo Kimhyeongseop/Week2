@@ -9,6 +9,8 @@
 - Firebase
 - Node.js
 
+---
+
 - [CryptoCompare](https://www.cryptocompare.com/) 라는 해외 가상화폐 사이트의 실시간 가격 정보 API를 사용했습니다.
 - 현재 실시간 서버를 닫아놓은 상태이기 때문에 암호화폐 가격은 변동이 없는 상태입니다.
 - 서버를 열어두면 아래와 같이 동작합니다.
